@@ -1,0 +1,47 @@
+<!-- Canvas for Chart -->
+<section id="analytics-section" style="padding: 50px;">
+    <div class="container">
+      <h3 class="text-center">Analytics Dashboard</h3>
+      <canvas id="analyticsChart" width="400" height="200"></canvas>
+    </div>
+  </section>
+  
+  <!-- Include Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- JavaScript for Analytics Chart -->
+  <script>
+    // Ensure the script executes after the DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      const ctx = document.getElementById('analyticsChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar', // Bar chart type
+        data: {
+          labels: ['Appointments', 'Treatments', 'Feedback'], // Chart labels
+          datasets: [{
+            label: '# of Records',
+            data: [12, 19, 3], // Data points for the chart
+            backgroundColor: [
+              'rgba(75, 192, 192, 0.2)', // Light blue for Appointments
+              'rgba(255, 99, 132, 0.2)', // Light pink for Treatments
+              'rgba(54, 162, 235, 0.2)'  // Light blue for Feedback
+            ],
+            borderColor: [
+              'rgba(75, 192, 192, 1)', // Blue border for Appointments
+              'rgba(255, 99, 132, 1)', // Pink border for Treatments
+              'rgba(54, 162, 235, 1)'  // Blue border for Feedback
+            ],
+            borderWidth: 1 // Border width
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true // Ensure y-axis starts at 0
+            }
+          }
+        }
+      });
+    });
+  </script>
+  

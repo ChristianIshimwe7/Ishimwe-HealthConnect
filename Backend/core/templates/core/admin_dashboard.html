@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="header_section">
+    <div class="header_top">
+      <div class="container-fluid">
+        <div class="contact_nav">
+          <a href="#"><i class="fa fa-phone"></i> Call: +250787563648</a>
+          <a href="#"><i class="fa fa-envelope"></i> Email: c.ishimwe@alustudent.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="header_bottom">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="{% url 'home' %}">Ishimwe HealthConnect</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
+            <li class="nav-item active"><a class="nav-link" href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Analytics Section -->
+  <section id="analytics-section" style="padding: 50px;">
+    <div class="container">
+      <h3 class="text-center">Analytics Dashboard</h3>
+      <canvas id="analyticsChart" width="400" height="200"></canvas>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>&copy; 2025 All Rights Reserved By <a href="#">Christian Ishimwe</a></p>
+    </div>
+  </footer>
+
+  <!-- Include Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- JavaScript for Analytics Chart -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const ctx = document.getElementById('analyticsChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Appointments', 'Treatments', 'Feedback'],
+          datasets: [{
+            label: '# of Records',
+            data: [12, 19, 3],
+            backgroundColor: [
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)'
+            ],
+            borderColor: [
+              'rgba(75, 192, 192, 1)',
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    });
+  </script>
+
+  <!-- Include JavaScript Files -->
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+
+</html>

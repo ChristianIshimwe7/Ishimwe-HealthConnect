@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Sign Up</title>
+
+  <!-- Inline CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .tab-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .tab-buttons button {
+      width: 50%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab-buttons button.active {
+      background: #0056b3;
+    }
+
+    .tab-buttons button:hover {
+      background: orange; /* Color change on hover */
+    }
+
+    .form-container {
+      display: none;
+    }
+
+    .form-container.active {
+      display: block;
+    }
+
+    h3 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      width: 100%;
+      padding: 10px;
+      background: #28a745;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background: orange; /* Color change on hover */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="tab-buttons">
+      <button id="login-tab" class="active" onclick="showForm('login')">Login</button>
+      <button id="signup-tab" onclick="showForm('signup')">Sign Up</button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-form" class="form-container active">
+      <h3>Login</h3>
+      <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <input type="email" placeholder="Enter your email" name="email" required />
+        <input type="password" placeholder="Enter your password" name="password" required />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div id="signup-form" class="form-container">
+      <h3>Sign Up</h3>
+      <form action="{% url 'signup' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="Full Name" name="full_name" required />
+        <input type="date" name="date_of_birth" required />
+        <input type="email" placeholder="Email" name="email" required />
+        <input type="tel" placeholder="Phone Number" name="phone_number" required />
+        <input type="text" placeholder="Village" name="village" required />
+        <input type="text" placeholder="Cell Sector" name="cell_sector" required />
+        <input type="text" placeholder="District" name="district" required />
+        <input type="password" placeholder="Password" name="password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Inline JavaScript -->
+  <script>
+    function showForm(form) {
+      document.getElementById('login-form').classList.remove('active');
+      document.getElementById('signup-form').classList.remove('active');
+      document.getElementById(form + '-form').classList.add('active');
+
+      document.getElementById('login-tab').classList.remove('active');
+      document.getElementById('signup-tab').classList.remove('active');
+      document.getElementById(form + '-tab').classList.add('active');
+    }
+  </script>
+</body>
+
+</html>
