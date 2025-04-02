@@ -1,17 +1,17 @@
 Ishimwe HealthConnect is a visionary and innovative healthcare platform that bridges the gap between patients and quality medical care in Rwanda and across Africa. Designed as a user-friendly solution, it leverages cutting-edge technology to address critical healthcare challenges, such as reducing maternal and infant mortality, combating child stunting and malnutrition, and improving access to professional and compassionate medical services.
 
 Platform Features
-Home: The central hub for users to access the platform's core functionalities.
+1. Home: The central hub for users to access the platform's core functionalities.
 
-About: Detailed information about the mission, vision, and values driving Ishimwe HealthConnect’s impactful work.
+2. About: Detailed information about the mission, vision, and values driving Ishimwe HealthConnect’s impactful work.
 
-Services: A comprehensive overview of the healthcare specialties offered, ensuring users can easily find and access the care they need.
+3. Services: A comprehensive overview of the healthcare specialties offered, ensuring users can easily find and access the care they need.
 
-Contact Us: A simple and intuitive contact form for users to communicate directly with the team.
+4. Contact Us: A simple and intuitive contact form for users to communicate directly with the team.
 
-Login/Signup: Secure user authentication for personalized access.
+5. Login/Signup: Secure user authentication for personalized access.
 
-Admin Dashboard: A feature-rich tool for administrators to manage and monitor platform operations.
+6. Admin Dashboard: A feature-rich tool for administrators to manage and monitor platform operations.
 
 Mission and Vision
 Ishimwe HealthConnect aspires to revolutionize healthcare delivery by:
