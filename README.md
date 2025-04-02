@@ -67,3 +67,59 @@ Ishimwe HealthConnect prioritizes accessibility and simplicity through:
 
 Contact and Collaboration
 Users can connect with the Ishimwe HealthConnect team via the Contact Us feature, sharing queries or feedback through a simple form that captures their name, phone number, email, and message.
+
+
+Ishimwe_HealthConnect can be used by different people : 
+
+For Patients:
+1. Create an Account:
+
+2. Sign up with your personal details, such as name, age, and contact information.
+
+3. Log in to access the platform.
+
+4. Book Appointments:
+
+5. Use the scheduling feature to book consultations with healthcare providers.
+
+6. Select the type of service (e.g., general medicine, obstetrics).
+
+7. Access Medical Records:
+
+7.1. View your medical history, prescriptions, and test results securely.
+
+7.2. Receive Health Recommendations:
+
+8. Get personalized health advice based on your medical data.
+
+
+For Healthcare Providers:
+Manage Patient Data:
+
+1. Access patient records and update them after consultations.
+
+2. Use the platform to prescribe medications or recommend treatments.
+
+3. Schedule Appointments:
+
+   View and manage your daily schedule of patient visits.
+
+4. Monitor Patient Progress:
+
+  Track patient health metrics and follow up on treatments.
+
+For Administrators:
+1. Oversee Operations:
+
+2. Manage hospital or clinic workflows, including staff schedules and resource allocation.
+
+3. Analyze Data:
+
+4. Use analytics tools to gain insights into patient demographics and healthcare outcomes.
+
+5. Ensure Compliance:
+
+Maintain data security and adhere to healthcare regulations.
+
+
+
