@@ -21,4 +21,22 @@ urlpatterns = [
     path('admin_dashboard/', views.admin_dashboard, name='admin_dashboard'),
     path('signup/', views.signup, name='signup'),
     path('success/', views.success_page, name='success_page'),
+    
+    
+]
+
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('service/', views.service, name='service'),
+    path('contact/', views.contact, name='contact'),
+    path('login/', views.login, name='login'),
+    path('admin_dashboard/', views.admin_dashboard, name='admin_dashboard'),
+    path('signup/', views.signup, name='signup'),
+    path('success/', views.success_page, name='success_page'),
+    path('treatment/', views.treatment, name='treatment'),  # New treatment route
 ]
